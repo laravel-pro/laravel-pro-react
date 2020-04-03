@@ -11,6 +11,6 @@
         <nav class="navbar navbar-dark bg-dark">
             <span class="navbar-brand">Laravel Pro</span>
         </nav>
-        <div id="example"></div>
+        <div id="app"></div>
     </body>
 </html>
