@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ThreadList from "./ThreadList";
 import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import ThreadPage from "./ThreadPage";
 
 function App() {
     const [threads, setThreads] = useState([]);
@@ -14,7 +16,16 @@ function App() {
 
     return (
         <div className="container">
-            <ThreadList threads={threads} />
+            <Router>
+                <Switch>
+                    <Route exact path="/threads">
+                        <ThreadList threads={threads} />
+                    </Route>
+                    <Route path="/threads/:id">
+                        <ThreadPage />
+                    </Route>
+                </Switch>
+            </Router>
         </div>
     );
 }

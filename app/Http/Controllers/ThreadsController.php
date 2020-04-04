@@ -11,4 +11,9 @@ class ThreadsController extends Controller
     {
         return Thread::query()->with(['author'])->get();
     }
+
+    public function show(Thread $thread)
+    {
+        return $thread->load('author');
+    }
 }
