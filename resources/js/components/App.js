@@ -16,20 +16,23 @@ function App() {
 
     return (
         <div className="container">
-            <Router>
-                <Switch>
-                    <Route exact path="/threads">
-                        <ThreadList threads={threads} />
-                    </Route>
-                    <Route path="/threads/:id">
-                        <ThreadPage />
-                    </Route>
-                </Switch>
-            </Router>
+            <Switch>
+                <Route exact path="/threads">
+                    <ThreadList threads={threads} />
+                </Route>
+                <Route path="/threads/:id">
+                    <ThreadPage />
+                </Route>
+            </Switch>
         </div>
     );
 }
 
 if (document.getElementById("app")) {
-    ReactDOM.render(<App />, document.getElementById("app"));
+    ReactDOM.render(
+        <Router>
+            <App />
+        </Router>,
+        document.getElementById("app")
+    );
 }
