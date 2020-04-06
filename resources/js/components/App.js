@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import ThreadPage from "./ThreadPage";
 import axios from 'axios';
+import Nav from './Nav';
 
 function App() {
     const [threads, setThreads] = useState([]);
@@ -16,17 +17,20 @@ function App() {
     }, []);
 
     return (
-        <div className="container mt-2">
-            <Switch>
-                <Redirect exact from="/" to="/threads" />
-                <Route exact path="/threads">
-                    <ThreadList threads={threads} />
-                </Route>
-                <Route path="/threads/:id">
-                    <ThreadPage />
-                </Route>
-            </Switch>
-        </div>
+        <>
+            <Nav />
+            <div className="container mt-2">
+                <Switch>
+                    <Redirect exact from="/" to="/threads" />
+                    <Route exact path="/threads">
+                        <ThreadList threads={threads} />
+                    </Route>
+                    <Route path="/threads/:id">
+                        <ThreadPage />
+                    </Route>
+                </Switch>
+            </div>
+        </>
     );
 }
 

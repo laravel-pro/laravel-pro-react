@@ -8,11 +8,6 @@
         <title>Laravel</title>
     </head>
     <body>
-        <nav class="navbar navbar-dark bg-dark">
-            <div class="container">
-                <span class="navbar-brand">Laravel Pro</span>
-            </div>
-        </nav>
         <div id="app"></div>
     </body>
 </html>
