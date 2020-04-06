@@ -9,5 +9,13 @@ module.exports = {
             }
         ],
         "@babel/preset-react"
+    ],
+    plugins: [
+        ['prismjs', {
+            languages: ['javascript', 'css', 'markup', 'jsx', 'php', 'shell', 'diff'],
+            plugins: ['show-language'],
+            theme: 'default',
+            css: true
+        }]
     ]
 };

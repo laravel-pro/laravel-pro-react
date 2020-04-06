@@ -1,11 +1,17 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
 import dayjs from "dayjs";
 import showdown from "showdown";
+import prism from 'prismjs';
 
 const converter = new showdown.Converter();
 
 function Thread({ thread }) {
     const html = useMemo(() => converter.makeHtml(thread.body), [thread.body]);
+
+    useEffect(() => {
+        prism.highlightAll();
+    }, [html]);
+
     return (
         <div className="media">
             <div className="media-body">
