@@ -1,6 +1,12 @@
 // Body
 $body-bg: #f8fafc;
 
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 900px,
+);
+
 // Typography
 $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
