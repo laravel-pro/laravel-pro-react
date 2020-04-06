@@ -16,7 +16,7 @@ function App() {
     }, []);
 
     return (
-        <div className="container">
+        <div className="container mt-2">
             <Switch>
                 <Redirect exact from="/" to="/threads" />
                 <Route exact path="/threads">

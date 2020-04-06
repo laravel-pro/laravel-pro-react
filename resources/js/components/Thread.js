@@ -21,7 +21,7 @@ function Thread({ thread }) {
                 <span className="text-muted small">
                     {dayjs(thread.created_at).format("YYYY-MM-DD HH:mm:ss")}
                 </span>
-                <div dangerouslySetInnerHTML={{ __html: html }}></div>
+                <div className="mt-2 pt-2 border-top" dangerouslySetInnerHTML={{ __html: html }} />
             </div>
         </div>
     );

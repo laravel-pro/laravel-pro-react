@@ -5,7 +5,7 @@ function ThreadList({ threads }) {
     return (
         <ul className="list-unstyled">
             {threads.map(({ id, title, author, created_at }) => (
-                <li key={id} className="p-2 media">
+                <li key={id} className="py-2 media border-bottom">
                     <div className="media-body">
                         <h5>
                             <a href={`/threads/${id}`}>{title}</a>
