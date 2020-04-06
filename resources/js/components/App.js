@@ -18,7 +18,7 @@ function App() {
     return (
         <div className="container">
             <Switch>
-                <Redirect from="/" to="/threads" />
+                <Redirect exact from="/" to="/threads" />
                 <Route exact path="/threads">
                     <ThreadList threads={threads} />
                 </Route>
