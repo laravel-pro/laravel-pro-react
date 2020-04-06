@@ -9,7 +9,9 @@
     </head>
     <body>
         <nav class="navbar navbar-dark bg-dark">
-            <span class="navbar-brand">Laravel Pro</span>
+            <div class="container">
+                <span class="navbar-brand">Laravel Pro</span>
+            </div>
         </nav>
         <div id="app"></div>
     </body>
