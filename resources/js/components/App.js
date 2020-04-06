@@ -28,6 +28,8 @@ function App() {
     );
 }
 
+export default App;
+
 if (document.getElementById("app")) {
     ReactDOM.render(
         <Router>
