@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ThreadList from "./ThreadList";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import ThreadPage from "./ThreadPage";
+import axios from 'axios';
 
 function App() {
     const [threads, setThreads] = useState([]);
@@ -17,6 +18,7 @@ function App() {
     return (
         <div className="container">
             <Switch>
+                <Redirect from="/" to="/threads" />
                 <Route exact path="/threads">
                     <ThreadList threads={threads} />
                 </Route>
